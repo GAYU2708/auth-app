@@ -5,7 +5,6 @@ import Register from './component/Register';
 import Login from './component/Login';
 import Home from './component/Home';
 import PrivateRoute from './component/PrivateRoute';
-import PublicRoute from './component/PublicRoute';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -15,14 +14,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route 
-            path='/' 
-            element={
-              <PublicRoute>
-                <Register />
-              </PublicRoute>
-            } 
-          />
+          <Route   path='/register'   element={ <Register />}/>
           <Route path='/login' element={<Login setDetails={setDetails} />} />
           <Route
             path='/home'

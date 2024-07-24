@@ -6,7 +6,7 @@ export default function Login({setDetails}) {
         name:"",
         pwd:"",
     });
-    const navi = useNavigate();
+    const nav = useNavigate();
  const handleSubmit =(e)=>{
     e.preventDefault();
 
@@ -15,11 +15,11 @@ export default function Login({setDetails}) {
     if(storedData.name === data.name && storedData.pwd === data.pwd){
         console.log("Login Successfully");
         setDetails(data);
-        navi('/home');
+        nav('/home');
     }else{
         console.log("Login unsuccessfull Kindly register");
         window.alert("your are not registered ");
-        navi('/');
+        nav('/register');
     }
  }
     
@@ -38,6 +38,7 @@ export default function Login({setDetails}) {
                 </div>
               
                 <button type='submit' className='btn btn-primary'>Login</button>
+                
 
             </form>
 
