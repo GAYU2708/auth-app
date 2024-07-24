@@ -18,6 +18,7 @@ export default function Login({setDetails}) {
         navi('/home');
     }else{
         console.log("Login unsuccessfull Kindly register");
+        window.alert("your are not registered ");
         navi('/');
     }
  }
